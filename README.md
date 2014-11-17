@@ -1,4 +1,4 @@
-Note: All source code in this repository is under the Unlicense.
+*Note: All source code in this repository is under the Unlicense.*
 
 Proposal for SpiderMonkey AST representation for import and export statements
 =============================================================================
