@@ -34,7 +34,7 @@ Reasoning behind the interface choice
 
     function acorn_isDefault(specifier) {
         return specifier.default ||
-            specifier.type === "ImportSpecifier" &amp;&amp;
+            specifier.type === "ImportSpecifier" &&
                 specifier.id.name === "default";
     }
 
@@ -42,25 +42,25 @@ Reasoning behind the interface choice
     function esprima_isDefault(specifier) {
         var type = specifier.type;
         return type === "ImportDefaultSpecifier" ||
-            type === "ImportSpecifier" &amp;&amp;
+            type === "ImportSpecifier" &&
                 specifier.id.name === "default";
     }
 
 
     function proposal_isNamed(specifier) {
         var id = specifier.id.name;
-        return id === specifier.name.name &amp;&amp; id !== "default";
+        return id === specifier.name.name && id !== "default";
     }
 
 
     function acorn_isNamed(specifier) {
-        return specifier.type === "ImportSpecifier" &amp;&amp;
+        return specifier.type === "ImportSpecifier" &&
             specifier.id.name !== "default";
     }
 
 
     function esprima_isNamed(specifier) {
-        return specifier.type === "ImportSpecifier" &amp;&amp;
+        return specifier.type === "ImportSpecifier" &&
             specifier.id.name !== "default";
     }
 
